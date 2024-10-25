@@ -1,0 +1,54 @@
+.seat-booking {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  position: fixed; /* Make it overlay */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  width: 300px;
+  text-align: center;
+}
+
+.seats {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 20px 0;
+}
+
+.seat {
+  background: #555;
+  color: #fff;
+  border: 1px solid #fff;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  text-align: center; /* Center seat number */
+}
+
+.seat.selected {
+  background: #4caf50; /* Highlight selected seats */
+}
+
+button {
+  margin: 5px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #ff5722;
+  color: white;
+  transition: background 0.3s;
+}
+
+button:disabled {
+  background-color: #999; /* Disabled button style */
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #e64a19; /* Button hover effect */
+}

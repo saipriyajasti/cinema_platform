@@ -1,0 +1,38 @@
+.home {
+  padding: 20px;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.movie-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.movie-image {
+  width: 100%; /* Make the image fill the card width */
+  height: 150px; /* Fixed height for uniformity */
+  /*object-fit: cover;  Maintains aspect ratio */
+}
+
+.movie-title {
+  font-size: 1.5em;
+  margin: 10px 0;
+  padding: 0 10px; /* Add padding for better spacing */
+}
+
+.movie-description {
+  font-size: 0.9em;
+  padding: 0 10px 10px; /* Add bottom padding for spacing */
+}
